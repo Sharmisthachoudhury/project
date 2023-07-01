@@ -24,6 +24,7 @@ def predict():
     com = request.form.get('Comtime')
 
     input_query = np.array([[task_size, pages, task_size_local, task_size_rem, distance, com]])
+    print('Received values:', task_size, pages, task_size_local, task_size_rem, distance, com)
 
     # Preprocess the data to handle missing values
     imputer = SimpleImputer(strategy='mean')
